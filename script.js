@@ -1,35 +1,31 @@
-// Change Navbar Background on Scroll
+// Smooth Navbar Background Change
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.background = '#000000';
-        nav.style.padding = '15px 8%';
+    if (window.scrollY > 100) {
+        nav.style.padding = '12px 5%';
+        nav.style.background = '#000';
     } else {
-        nav.style.background = 'rgba(8, 8, 8, 0.95)';
-        nav.style.padding = '20px 8%';
+        nav.style.padding = '20px 5%';
+        nav.style.background = 'rgba(0,0,0,0.9)';
     }
 });
 
-// Smooth Scroll for Navigation
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        document.querySelector(targetId).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// Simple Reveal Animation on Scroll
+const sections = document.querySelectorAll('section');
+const options = { threshold: 0.1 };
 
-// Initial Fade-in Animation
-window.addEventListener('DOMContentLoaded', () => {
-    const heroContent = document.querySelector('.hero-content');
-    heroContent.style.opacity = '0';
-    heroContent.style.transform = 'translateY(20px)';
-    
-    setTimeout(() => {
-        heroContent.style.transition = 'all 1s ease-out';
-        heroContent.style.opacity = '1';
-        heroContent.style.transform = 'translateY(0)';
-    }, 200);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, options);
+
+sections.forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'all 0.8s ease-out';
+    observer.observe(section);
 });
