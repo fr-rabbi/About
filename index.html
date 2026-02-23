@@ -1,227 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>F R Rabbi | Programmer</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0d0d0d;
-    color: #ffffff;
-    scroll-behavior: smooth;
-}
-
-header {
-    background: #111;
-    padding: 15px 50px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #00ffcc;
-    text-decoration: none;
-}
-
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #000000, #1a1a1a);
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 50px;
-    color: #00ffcc;
-}
-
-section {
-    padding: 100px 50px;
-}
-
-h2 {
-    color: #00ffcc;
-}
-
-.skill {
-    margin: 15px 0;
-}
-
-.bar {
-    background: #222;
-    height: 8px;
-    border-radius: 5px;
-}
-
-.progress {
-    height: 8px;
-    background: #00ffcc;
-    border-radius: 5px;
-}
-
-.card, .edu-card {
-    background: #1a1a1a;
-    padding: 20px;
-    margin: 20px 0;
-    border-left: 4px solid #00ffcc;
-    transition: 0.3s;
-}
-
-.card:hover, .edu-card:hover {
-    transform: translateX(6px);
-}
-
-.edu-card span {
-    color: #888;
-    font-size: 14px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazle Rabbi | Digital Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <h2>F R Rabbi</h2>
-        <ul>
+    <nav id="navbar">
+        <div class="logo">FR<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-</header>
 
-<section class="hero">
-    <h1>F R Rabbi</h1>
-    <h3 id="typing"></h3>
-</section>
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h3 class="fade-in">HELLO, I AM</h3>
+            <h1 class="glitch">FAZLE RABBI</h1>
+            <p class="subtitle">Student & Digital Enthusiast</p>
+            <div class="hero-btns">
+                <a href="#about" class="btn primary">Explore More</a>
+                <a href="#contact" class="btn secondary">Hire Me</a>
+            </div>
+        </div>
+    </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a passionate programmer focused on Python, Android Development,
-        Linux environments, and Cyber Security fundamentals.
-    </p>
-</section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">The Persona</h2>
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <div class="info-row">
+                        <i class="fas fa-user-circle"></i>
+                        <span><strong>Full Name:</strong> Fazle Rabbi</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span><strong>Born:</strong> 08 August 2007</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span><strong>Location:</strong> Alamdanga, Chuadanga, BD</span>
+                    </div>
+                    <p class="bio">
+                        "I am a tech-driven individual focused on mastering digital worlds. I blend logical thinking with academic excellence to navigate the evolving landscape of technology."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="education">
-    <h2>Education</h2>
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">My Ninja Way (Education)</h2>
+            <div class="timeline">
+                
+                <div class="timeline-box">
+                    <div class="content">
+                        <span class="year">PSC</span>
+                        <h3>Al-Amin Cadet Academy</h3>
+                        <p>Foundation of my academic discipline and early curiosity.</p>
+                    </div>
+                </div>
 
-    <div class="edu-card">
-        <h3>Higher Secondary Certificate (HSC)</h3>
-        <p>M.S Zoha Degree College</p>
-        <span>2024 - Present | Science</span>
-    </div>
+                <div class="timeline-box">
+                    <div class="content">
+                        <span class="year">JSC</span>
+                        <h3>Kumari Union Secondary High School</h3>
+                        <p>Exploration of broader sciences and digital basics.</p>
+                    </div>
+                </div>
 
-    <div class="edu-card">
-        <h3>Secondary School Certificate (SSC)</h3>
-        <p>Kumari Union Secondary High School</p>
-        <span>Completed | Science</span>
-    </div>
+                <div class="timeline-box">
+                    <div class="content">
+                        <span class="year">SSC</span>
+                        <h3>Kumari Union Secondary High School</h3>
+                        <p>Specialized in Science with a focus on logical problem solving.</p>
+                    </div>
+                </div>
 
-    <div class="edu-card">
-        <h3>Junior School Certificate (JSC)</h3>
-        <p>Kumari Union Secondary High School</p>
-        <span>Completed</span>
-    </div>
+                <div class="timeline-box">
+                    <div class="content">
+                        <span class="year">HSC</span>
+                        <h3>M.S Zoha Degree College</h3>
+                        <p>Current pursuit of higher secondary education in Science.</p>
+                    </div>
+                </div>
 
-    <div class="edu-card">
-        <h3>Primary School Certificate (PSC)</h3>
-        <p>Al-Amin Cadet Academy</p>
-        <span>Completed</span>
-    </div>
-</section>
+            </div>
+        </div>
+    </section>
 
-<section id="skills">
-    <h2>Skills</h2>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Summon Me</h2>
+            <div class="contact-wrapper">
+                <a href="mailto:contact@fazlerabbi.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email Me</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="tel:+880123456789" class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Call Me</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <div class="skill">
-        <span>Python</span>
-        <div class="bar"><div class="progress" style="width:85%"></div></div>
-    </div>
+    <footer>
+        <p>&copy; 2026 Fazle Rabbi | Powered by Creativity</p>
+    </footer>
 
-    <div class="skill">
-        <span>Android Development (Sketchware)</span>
-        <div class="bar"><div class="progress" style="width:80%"></div></div>
-    </div>
-
-    <div class="skill">
-        <span>Linux & Termux</span>
-        <div class="bar"><div class="progress" style="width:75%"></div></div>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>Android Utility Tools</h3>
-        <p>Custom tools built using Sketchware.</p>
-    </div>
-
-    <div class="card">
-        <h3>Automation Scripts</h3>
-        <p>Python-based automation scripts.</p>
-    </div>
-
-    <div class="card">
-        <h3>Security Research</h3>
-        <p>Basic vulnerability research and practice.</p>
-    </div>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>GitHub: github.com/frrabbi-dev</p>
-    <p>Facebook: facebook.com/frrabbi0</p>
-</section>
-
-<footer>
-    <p>© 2026 F R Rabbi | All Rights Reserved</p>
-</footer>
-
-<script>
-const text = "Programmer | Linux Explorer | Future Cyber Specialist";
-let i = 0;
-
-function typing() {
-    if (i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, 60);
-    }
-}
-
-typing();
-</script>
-
+    <script src="script.js"></script>
 </body>
-  </html>
+</html>
